@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pokemaster's Theatre</title>
+  <link rel="icon" type="image/x-icon" href="https://genshindb.org/wp-content/uploads/2021/01/Character-Venti-.png">
+
+  <style>
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      margin: 0;
+      scrollbar-width: thin;
+      scrollbar-color: #888888 #f2f2f2;
+      /* Customize the scrollbar track */
+      overflow: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #888888 #f2f2f2;
+    }
+
+    header {
+      background-color: #78807F;
+      color: black;
+      overflow: hidden;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 30px 30px;
+      font-family: Arial, sans-serif
+    }
+
+    .categories {
+      padding: 20px;
+    }
+
+    .category {
+      margin-bottom: 20px;
+    }
+
+    .category-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .movie-list {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .movie {
+      flex: 0 0 auto;
+      margin-right: 10px;
+      text-align: center;
+    }
+
+    .movie img {
+      width: 150px;
+      border-radius: 5px;
+    }
+
+    .movie-title {
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .movie img {
+      width: 150px;
+      height: 225px;
+      /* Adjust the height as needed */
+      border-radius: 5px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .movie img:hover {
+      transform: scale(1.1);
+    }
+
+
+    footer {
+      background-color: #78807F;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px 20px 20px 20px;
+      bottom: 0;
+      transition: bottom 0.3s;
+    }
+
+    footer div {
+      display: flex;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin: 10px;
+      margin-right: 30px;
+    }
+
+    header {
+      display: flex;
+
+      align-items: center;
+      padding: 20px;
+    }
+
+    header img {
+      width: 100px;
+      /* Adjust the width as needed */
+      height: 100px;
+      /* Adjust the height as needed */
+    }
+
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #888888;
+        border-radius: 20px;
+    }
+    .marquee {
+        font-size: 18px;
+        font-weight: bold;
+        color: pink;
+    }
+
+    @media (max-width: 992px) {
+      header {
+          flex-direction: column;
+
+          padding: 5px;
+      }
+
+      header img {
+          width: 120px;
+          height: 140px;
+          margin-bottom: 5px;
+          margin-top: 10px;
+      }
+
+      header h1 {
+          font-size: 70px;
+        align-items: center;
+      }
+
+      header pre {
+          text-align: center;
+          font-size: 20px;
+          margin-top: 10px;
+      }
+
+        .categories {
+            padding: 10px;
+        }
+
+        .category {
+            margin-bottom: 20px;
+        }
+
+        .movie-list {
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        .movie {
+            margin-right: 10px;
+        }
+
+        .movie img {
+            width: 370px;
+            height: 500px;
+        }
+
+        .movie-title {
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        footer {
+            padding: 20px;
+        }
+
+        footer p,
+        .marquee {
+            font-size: 30px;
+        }
+
+        footer img {
+            width: 30px;
+            height: 30px;
+            margin: 10px ;
+          margin-right: 30px;
+        }
+      .category-title {
+        font-size: 60px;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        margin-bottom: 15px;
+        margin-left: 20px;
+        margin-top: 6px;
+        color: white;
+        font-smooth: always;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://ih1.redbubble.net/image.4346518542.0429/raf,360x360,075,t,fafafa:ca443f4786.jpg"
+      alt="Logo">&nbsp&nbsp&nbsp<h1>Pokemaster's Theatre</h1>
+    &nbsp&nbsp
+    <pre>Want to suggest your fav movies? Join our <a href="https://discord.gg/QaRMXB4eQX">Discord Server</a> to add movies here. Movies mostly here
+      only get added if requested, so to get new movies request em! </pre>
+
+  </header>
+
+  <div class="categories" id="categories">
+    <!-- Categories will be dynamically added here -->
+  </div>
+
+  <footer id="footer">
+    <p>Pokemater's Theatre</p>
+    <marquee behavior="scroll" direction="left" class="marquee">Added Insidious red door,paw patrol,mewtwo strikes back on 28/10/23 </marquee>
+    <div>
+      <a href="https://www.instagram.com/utkarshthesus/" target="_blank">
+        <img
+          src="https://www.edigitalagency.com.au/wp-content/uploads/new-small-Instagram-logo-full-colour-png-184x184-pixels.png"
+          alt="Instagram Logo">
+      </a>
+      <a href="https://youtu.be/ajT3VKVUURg?si=64W9eoN32ERAkX7B" target="_blank">
+        <img
+          src="https://tl.vhv.rs/dpng/s/404-4043399_hd-youtube-logo-png-transparent-background-transparent-background.png"
+          alt="YouTube Logo">
+      </a>
+      <!-- Add other social media icons here -->
+      <a href="https://discord.gg/QaRMXB4eQX" target="_blank">
+        <img
+          src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png"
+          alt="Discord Logo">
+      </a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("footer").style.bottom = "0";
+        } else {
+            document.getElementById("footer").style.bottom = "-90px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+
+    // Example JavaScript code for dynamically adding categories and movies
+
+    const categoriesContainer = document.getElementById('categories');
+
+    // Function to create a movie element
+    const createMovieElement = (movie) => {
+      const movieElement = document.createElement('div');
+      movieElement.classList.add('movie');
+
+      const imageElement = document.createElement('img');
+      imageElement.src = movie.image;
+      imageElement.alt = movie.title;
+      imageElement.onclick = () => {
+        // Redirect to the specific movie page
+        redirectToMoviePage(movie.title);
+      };
+      movieElement.appendChild(imageElement);
+
+      const titleElement = document.createElement('div');
+      titleElement.classList.add('movie-title');
+      titleElement.textContent = movie.title;
+      movieElement.appendChild(titleElement);
+
+      return movieElement;
+    };
+
+    // Function to redirect to the specific movie page
+    const redirectToMoviePage = (movieTitle) => {
+      // Implement the logic to redirect to the specific movie page based on the movie title
+      switch (movieTitle) {
+        case 'Suzume':
+          window.location.href = 'suzume.html';
+          break;
+        case 'Five nights at Freddy':
+          window.location.href = 'fnafmov.html';
+          break;
+          case 'The Adam Project':
+          window.location.href = 'adamproject.html';
+          break;
+          case 'Lego Avengers':
+          window.location.href = 'legoavengers.html';
+          break;
+          case 'Nun 2':
+          window.location.href = 'nun2.html';
+          break;
+          case 'Sukhee':
+          window.location.href = 'sukhee.html';
+          break;
+          case 'Insidious Red Door':
+          window.location.href = 'insidiousredoor.html';
+          break;
+          case 'Paw Patrol':
+          window.location.href = 'pawpatrol.html';
+          break;
+          case 'Mewtwo Strikes back':
+          window.location.href = 'mewtwostrikesback.html';
+          break;
+          case 'Jujustsu kaisen 0':
+          window.location.href = 'jjk0.html';
+          break;
+          case 'D - Stand by me 2':
+          window.location.href = 'doraemonstand2.html';
+          break;
+          case 'scarlet bond':
+          window.location.href = 'scarletbond.html';
+          break;
+          case 'The Avengers':
+          window.location.href = 'avengers1.html';
+          break;
+          case 'A: Age of Ultron':
+          window.location.href = 'avengers2.html';
+          break;
+          case 'A: Infinity War':
+          window.location.href = 'avengers3.html';
+          break;
+          case 'Click here to access the web-series webpage':
+          window.location.href = 'webshowsindex.html';
+          break;
+        // Add more cases for other movies
+        default:
+          // Redirect to a default movie page or handle cases where the movie page doesn't exist
+          window.location.href = 'index.html';
+          break;
+      }
+    };
+
+
+    // Function to create a category element
+    const createCategoryElement = (category) => {
+      const categoryElement = document.createElement('div');
+      categoryElement.classList.add('category');
+
+      const titleElement = document.createElement('div');
+      titleElement.classList.add('category-title');
+      titleElement.textContent = category.title;
+      categoryElement.appendChild(titleElement);
+
+      const movieListElement = document.createElement('div');
+      movieListElement.classList.add('movie-list');
+      category.movies.forEach(movie => {
+        const movieElement = createMovieElement(movie);
+        movieListElement.appendChild(movieElement);
+      });
+      categoryElement.appendChild(movieListElement);
+
+      return categoryElement;
+    };
+
+    // Add categories and their movies to the page
+    const categoriesData = [
+      {
+        title: 'Action',
+        movies: [
+          {title: 'Loki', image: 'https://image.tmdb.org/t/p/w185/voHUmluYmKyleFkTu3lOXQG702u.jpg'}
+        ]
+      },
+      {
+        title: 'Horror',
+        movies: [
+            {title: 'Wednesday', image: 'https://images.justwatch.com/poster/301795602/s718/season-1.jpg'},
+
+        ]
+        // Add more categories and their movies here
+      },
+      {
+        title: 'Sci-fi',
+        movies: [
+          {title: 'Alice In Borderland', image: 'https://resizing.flixster.com/lKCL0DL4PSd7X3KWyzAIDmk2Npw=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvUlRUVjc4MDcxMS53ZWJw'},
+          {title: 'Oppenheimer', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Oppenheimer_%28film%29.jpg/220px-Oppenheimer_%28film%29.jpg'},
+
+        ]
+        // Add more categories and their movies here
+      },
+      {
+        title: 'Thriller',
+        movies: [
+          {title: 'Squid Game', image: 'https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg'},
+         
+        ]
+        // Add more categories and their movies here
+      },
+      {
+        title: 'K Drama',
+        movies: [
+          {title: 'All Of Us Are Dead', image: 'https://m.media-amazon.com/images/M/MV5BOTY1ZGM2YzQtMTBjZC00NjE2LWJlNzUtYjA0YjYxNzBjMmRjXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg'},
+
+        ]
+        // Add more categories and their movies here
+      },
+      {
+        title: 'Hindi',
+        movies: [
+          {title: 'Kaala Paani', image: 'https://m.media-amazon.com/images/M/MV5BODFmZTA0MzQtYjdjZS00ZWIxLTkzYTAtYWYzNzAyNzc0NzFlXkEyXkFqcGdeQXVyMTU2MTAxNTI2._V1_.jpg'},
+          {title: 'Jawan', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Jawan_film_poster.jpg/220px-Jawan_film_poster.jpg'},
+
+        ]
+        // Add more categories and their movies here
+      },
+      
+        
+    
+    ];
+
+    categoriesData.forEach(categoryData => {
+      const categoryElement = createCategoryElement(categoryData);
+      categoriesContainer.insertAdjacentElement('beforeend', categoryElement);
+    });
+  </script>
+
+
+</body>
+
+</html>
