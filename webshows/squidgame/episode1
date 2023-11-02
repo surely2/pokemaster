@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../squidgame/episode-1.html">
     <title>Video Page</title>
     <style>
         body {
@@ -192,29 +192,60 @@
 
         <div class="video-container">
             <div class="video">
-                <iframe src="https://drive.google.com/file/d/1BF6NwYDD83Q5TSTwzWnowkkQlmlL7-Vk/preview" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1BF6NwYDD83Q5TSTwzWnowkkQlmlL7-Vk/preview" width="800" height="430" allow="autoplay" frameborder="0"></iframe>
             </div>
-            <div class="video-title">Episode - 1 Cruelty</div>
+            <div class="video-title">Episode - 1 Wednesday's Child Is Full of Woe</div>
             <div class="info">
                 <p>
-                    Demon Slayer: Kimetsu no Yaiba is a Japanese fantasy manga series and comic book by Koyoharu Gotouge.<br>
-                     It follows Tanjiro Kamado, a young boy living in Taisho-era Japan who becomes the sole survivor of his family after demons kill them.
-                    <br> He then sets out to save his sister Nezuko who has transformed into a demon.
+                    When a deliciously wicked prank gets Wednesday expelled<br>, her parents ship her off to Nevermore Academy, the boarding school where they fell in love.
                 </p>
                 <!-- Add more information about the video here -->
             </div>
         </div>
         <div class="banner">
-            <img src="https://images.justwatch.com/poster/258527365/s718/season-1.jpg" alt="Advertisement" style="width: 100%; height: 100%;">        </div>
+            <img src="https://images.justwatch.com/poster/301795602/s718/season-1.jpg" alt="Advertisement" style="width: 100%; height: 100%;">        </div>
         
     </div>
 
     <script>
-        function goToEpisode(episode) {
-            // Redirect to the designated episode page
-            // Replace 'episode-page.html' with your actual page URL
-            window.location.href = `episode-.html?episode=${episode}`;
+
+    function goToEpisode(Episode) {
+        switch (Episode) {
+            case 'episode1':
+                window.location.href = 'webshows/squidgame/episode1.html';
+                break;
+            case 'episode2':
+                window.location.href = 'episode2.html';
+                break;
+            case 'episode3':
+                window.location.href = 'episode3.html';
+                break;
+            case 'episode4':
+                window.location.href = 'episode4.html';
+                break;
+            case 'episode5':
+                window.location.href = 'episode5.html';
+                break;
+            case 'episode6':
+                window.location.href = 'episode6.html';
+                break;
+            case 'episode7':
+                window.location.href = 'episode7.html';
+                break;
+            case 'episode8':
+                window.location.href = 'episode8.html';
+                break;
+            case 'episode9':
+                window.location.href = 'episode9.html';
+                break;
+            // Add more cases for other episodes
+            default:
+                // Redirect to a default episode page or handle cases where the episode page doesn't exist
+                window.location.href = 'index.html';
+                break;
         }
+    }
+
     </script>
 </body>
 </html>
