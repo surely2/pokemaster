@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watching : Squid game s1</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 110px 50px 300px 50px;
+        }
+        .video {
+            width: 800px;
+            height: 450px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .video-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .info {
+            font-size: 16px;
+            text-align: center;
+        }
+        .episodes-container {
+            width: 200px;
+            height: 360px;
+            overflow: auto;
+            background-color: #333;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 140px 20px;
+            padding-left: 10px;
+        }
+        .episodes {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .episode-item {
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: #fff;
+        }
+        .episode-item:hover {
+            background-color: #555;
+        }
+        .banner {
+            width: 200px;
+            height: 450px;
+            margin: 140px 22px;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+      }
+
+      nav img {
+          height: 100px;
+          width: auto;
+          margin-left: 20px;
+      }
+
+      .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 500px;
+        color: white;
+        border-radius: 10px;
+      }
+
+
+
+      .active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+      .topnav {
+          overflow: hidden;
+          background-color: #333;
+          position: relative;
+          height: 80px; /* Adjust the height as needed */
+      }
+
+      .topnav .icon {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 20px;
+          cursor: pointer;
+      }
+
+      .menu-toggle {
+          display: block;
+          font-size: 24px;
+          cursor: pointer;
+          color: white;
+          padding: 25px;
+      }
+
+      .topnav a {
+          color: white;
+          padding: 20px;
+          text-decoration: none;
+          font-size: 20px;
+          display: block;
+      }
+
+      nav {
+            width: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+         
+        }
+
+        nav h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<nav>
+    <img src="https://ih1.redbubble.net/image.4346518542.0429/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="ventilogo">
+    <a href="index.html"><h1>Pokemaster's Theatre</h1></a>
+  <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a class="icon" onclick="myFunction()"><img src="https://icon-library.com/images/hamburger-menu-icon-transparent/hamburger-menu-icon-transparent-3.jpg" alt="Menu Icon" width="30" height="30"></a>
+  </div>
+</nav>
+<body>
+    <div class="container">
+        <div class="episodes-container">
+            <ul class="episodes">
+                <li class="episode-item" onclick="goToEpisode('episode1')">Episode 1</li>
+                <li class="episode-item" onclick="goToEpisode('episode2')">Episode 2</li>
+                <li class="episode-item" onclick="goToEpisode('episode3')">Episode 3</li>
+                <li class="episode-item" onclick="goToEpisode('episode4')">Episode 4</li>
+                <li class="episode-item" onclick="goToEpisode('episode5')">Episode 5</li>
+                <li class="episode-item" onclick="goToEpisode('episode6')">Episode 6</li>
+                <li class="episode-item" onclick="goToEpisode('episode7')">Episode 7</li>
+                <li class="episode-item" onclick="goToEpisode('episode8')">Episode 8</li>
+                <li class="episode-item" onclick="goToEpisode('episode9')">Episode 9</li>
+                <!-- Add more episodes as needed -->
+            </ul>
+        </div>
+
+        <div class="video-container">
+            <div class="video">
+                <iframe src="https://drive.google.com/file/d/1hjXmp5IxqmvJywmOzFPXtHpvfUF3sQ_h/preview" width="800" height="430" allow="autoplay" frameborder="0"></iframe>
+            </div>
+            <div class="video-title">Episode - 5 A Fair World</div>
+            <div class="info">
+                <p>
+                Gi-hun and his team take turns keeping guard through the night;<br> the masked men encounter trouble with their co-conspirators.
+                </p>
+                <!-- Add more information about the video here -->
+            </div>
+        </div>
+        <div class="banner">
+            <img src="https://bsmknighterrant.org/wp-content/uploads/2021/10/Squid_Game-picture.jpeg" alt="Advertisement" style="width: 100%; height: 100%;">        </div>
+        
+    </div>
+
+   <script>
+
+    function goToEpisode(Episode) {
+        switch (Episode) {
+            case 'episode1':
+                window.location.href = 'episode1.html';
+                break;
+            case 'episode2':
+                window.location.href = 'episode2.html';
+                break;
+            case 'episode3':
+                window.location.href = 'episode3.html';
+                break;
+            case 'episode4':
+                window.location.href = 'episode4.html';
+                break;
+            case 'episode5':
+                window.location.href = 'episode5.html';
+                break;
+            case 'episode6':
+                window.location.href = 'episode6.html';
+                break;
+            case 'episode7':
+                window.location.href = 'episode7.html';
+                break;
+            case 'episode8':
+                window.location.href = 'episode8.html';
+                break;
+             case 'episode9':
+                window.location.href = 'episode9.html';
+                break;
+            // Add more cases for other episodes
+            default:
+                // Redirect to a default episode page or handle cases where the episode page doesn't exist
+                window.location.href = 'index.html';
+                break;
+        }
+    }
+
+    </script>
+</body>
+</html>
