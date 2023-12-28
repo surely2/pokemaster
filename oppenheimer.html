@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watching : Oppenheimer</title>
+  <link rel="icon" type="image/x-icon" href="https://genshindb.org/wp-content/uploads/2021/01/Character-Venti-.png">
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+
+        }
+
+        nav {
+            width: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: auto;
+            max-width: auto;
+            margin-top: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: dimgray;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container {
+            flex: 2;
+            margin: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 60vh;
+            border-radius: 20px;
+        }
+
+        .movie-details {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: gold;
+        }
+
+        .movie-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .movie-description {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .side-banner {
+            flex: 1;
+            padding: 20px;
+            background-color: #f2f2f2;
+            text-align: center;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+          border-radius: 20px 20px 20px 20px
+        }
+
+        .side-banner img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+      nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          background-color: #333;
+          color: #fff;
+          padding: 10px;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+      }
+
+      nav img {
+          height: 100px;
+          width: auto;
+          margin-left: 20px;
+      }
+
+      .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 500px;
+        color: white;
+        border-radius: 10px;
+      }
+
+
+
+      .active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+      .topnav {
+          overflow: hidden;
+          background-color: #333;
+          position: relative;
+          height: 80px; /* Adjust the height as needed */
+      }
+
+      .topnav .icon {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 20px;
+          cursor: pointer;
+      }
+
+      .menu-toggle {
+          display: block;
+          font-size: 24px;
+          cursor: pointer;
+          color: white;
+          padding: 25px;
+      }
+
+      .topnav a {
+          color: white;
+          padding: 20px;
+          text-decoration: none;
+          font-size: 20px;
+          display: block;
+      }
+
+
+      @media only screen and (max-width: 992px) and (min-width: 400px)   {
+          .main-content {
+              flex-direction: column;
+          }
+
+          .video-container {
+              flex: 3;
+              margin: 20px;
+              border-radius: 20px;
+              overflow: hidden;
+          }
+
+          .video-container iframe {
+              width: 950px;
+              height: 600px; /* Adjust the height as needed */
+          }
+
+          .movie-details {
+              flex: 1;
+              margin: 20px;
+              padding: 20px;
+              border-radius: 20px;
+              background-color: gold;
+          }
+
+          .side-banner {
+              display: none;
+          }
+      }
+          .topnav a:not(.icon) {
+              display: none;
+          }
+
+          .topnav a.icon {
+              display: block;
+          }
+
+          .topnav.responsive {
+              position: relative;
+          }
+
+          .topnav.responsive a {
+              display: block;
+              text-align: center;
+          }
+
+      nav {
+        display: flex;
+          width: 970px;
+          background-color: #333;
+          color: #fff;
+          padding: 10px 0;
+          text-align: center;
+        height: 200px
+      }
+      nav h1 {
+        font-size: 60px;
+      }
+      nav img {
+        height: 150px;
+      }
+
+      footer {
+          width: 100%;
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+        height: 100px;
+        font-size: 40px;
+      }
+
+       }
+    </style>
+</head>
+<body>
+  <nav>
+      <img src="https://ih1.redbubble.net/image.4346518542.0429/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="ventilogo">
+      <a href="index.html"><h1>Pokemaster's Theatre</h1></a>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a class="icon" onclick="myFunction()"><img src="https://icon-library.com/images/hamburger-menu-icon-transparent/hamburger-menu-icon-transparent-3.jpg" alt="Menu Icon" width="30" height="30"></a>
+    </div>
+  </nav>
+
+    <div class="main-content">
+        <div class="video-container">
+            <iframe id="video-player" src="https://drive.google.com/file/d/18_JZ2EwtFKL_uGta70-GcQi1B4w1LgYY/preview" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="movie-details">
+            <div class="movie-title" align="center">୨⎯ "Oppenheimer" ⎯୧</div>
+          <div class="additional-details">
+              <p>
+                • Director: Christopher Nolan <br>
+                • Box office: 95.38 crores USD <br>
+                • Budget: 10 crores USD <br>
+                • Music director: Ludwig Göransson <br>
+                • Distributed by: Universal Pictures
+
+</p>
+             <p>IMDB RATING : 8.4/10</p>
+          </div>
+               Story : 
+            <div class="movie-description">
+              • During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history.
+            </div>
+
+        </div>
+        <div class="side-banner">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/styles/medium_crop_simple/public/2023-09/animal_poster.jpg?VersionId=i5BcU2LPoSR.R3tzn4SJ5tLFRO4s2XM_&size=750:*" alt="Fun Banner 2">
+        </div>
+
+    </div>
+    <footer id="footer">
+        <p>Want more movies? Join our discord server and suggest some which need to be here!</p>
+    </footer>
+
+  <script>
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+              x.className += " responsive";
+          } else {
+              x.className = "topnav";
+          }
+      }
+  </script>
+
+</body>
+</html>
